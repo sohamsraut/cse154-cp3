@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+  Name: Soham Raut
+  Date: May 6, 2022
+  Section: CSE 154 AF
+  This is the index.html page for my Evil Typing Test. It is used to implement a typing test with
+  text generated and retrieved from the FakerAPI. It provides a structure for the test and displays
+  an introduction as the page loads.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Lato&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+    <title>The Evil Typing Test</title>
+  </head>
+  <body>
+    <header>
+      <h1>The <em>Evil</em> Typing Test</h1>
+      <h2><em>How fast can you type a paragraph of nonsense?</em></h2>
+    </header>
+    <main>
+      <article id="intro">
+        <p>People succeed in typing tests because the text makes sense...</p>
+        <p>Let's see your <strong>TRUE</strong> typing speed!</p>
+        <button id="start">Start Test!</button>
+      </article>
+      <article id="game" class="hidden">
+        <section>
+          <p>Time: <span id="time">00:00</span></p>
+          <textarea id="input-text" rows="7" cols="120">
+          </textarea>
+        </section>
+        <section id="game-text">
+          <!-- Populated using text from FakerAPI by JS-->
+        </section>
+      </article>
+      <section id="results" class="hidden">
+        <h2>Results</h2>
+        <section>
+          <div id="chars-per-min">
+            <!-- Calculated and populated using JS -->
+          </div>
+          <p>Characters per Minute</p>
+        </section>
+        <section>
+          <div id="words-per-min">
+            <!-- Calculated and populated using JS -->
+          </div>
+          <p>Words per Minute</p>
+        </section>
+        <button id="again">Play Again</button>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Portions of this page &copy; Soham Raut, 2022. All other attributions cited in document
+        or page source.
+      </p>
+      <p>
+        Text generated and retrieved from <a href="https://fakerapi.it/en" target="_blank">FakerAPI.it</a>
+      </p>
+    </footer>
+  </body>
+</html>
